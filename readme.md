@@ -1,6 +1,7 @@
-# NTPython
-Some python scripts to make fun stuff in Nuclear Throne.
+# Videogames Pynput Utils
+Some python scripts to make fun stuff in videogames.
 
+## Nuclear Throne
 - <b>frog.py</b>:
 This script automatically holds the right click button when you are not holding any directional key (W A S D). This lets Frog walk normally like all the other characters.
 - <b>kbAim.py</b>:
