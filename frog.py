@@ -1,6 +1,8 @@
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
 
+from pynput.keyboard import Listener
+
 keyboard = KeyboardController()
 mouse = MouseController()
 
@@ -41,5 +43,5 @@ def on_release(key):
     if not d:
         mouse.press(Button.right)
 
-with keyboard.Listener(on_press = on_press, on_release = on_release) as listener:
+with Listener(on_press = on_press, on_release = on_release) as listener:
     listener.join()
