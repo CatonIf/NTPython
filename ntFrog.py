@@ -9,7 +9,9 @@ mouse = MouseController()
 d = 0
 
 def on_press(key):
-
+    
+    if not hasattr(key, 'char'): return
+    
     global d
     
     c = key.char
@@ -27,7 +29,9 @@ def on_press(key):
 
 
 def on_release(key):
-
+    
+    if not hasattr(key, 'char'): return
+    
     global d
     
     c = key.char
@@ -43,5 +47,5 @@ def on_release(key):
     if not d:
         mouse.press(Button.right)
 
-with Listener(on_press = on_press, on_release = on_release) as listener:
+with Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
